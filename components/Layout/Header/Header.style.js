@@ -1,10 +1,7 @@
 import styled from "styled-components";
 
 const Header = styled.header`
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
+  position: relative;
 
   .inner {
     display: flex;
@@ -25,6 +22,7 @@ const HeaderTop = styled.div`
 `;
 
 const Logo = styled.h1`
+  margin: 1.5rem 0;
   a {
     display: flex;
     align-items: center;

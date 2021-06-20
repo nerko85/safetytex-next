@@ -7,9 +7,7 @@ export default function Layout({ children }) {
     <div className="page">
       <div className="wrapp">
         <Header />
-        <div className="container">
-          <main>{children}</main>
-        </div>
+        <main>{children}</main>
       </div>
       <Footer />
     </div>
