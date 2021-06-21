@@ -12,6 +12,11 @@ const Hero = styled.div`
 
     .text {
       max-width: 40vw;
+
+      @media (max-width: ${({ theme }) => theme.tablet}) {
+        max-width: 90%;
+      }
+
       h1 {
         color: ${({ small, theme }) => (small ? theme.primary : "#fff")};
         margin-bottom: ${({ small }) => (small ? "0px" : "0.67em")};
@@ -19,7 +24,6 @@ const Hero = styled.div`
       }
       p {
         color: ${({ small, theme }) => (small ? theme.text : "#fff")};
-        font-weight: 600;
         margin-bottom: 3rem;
       }
     }

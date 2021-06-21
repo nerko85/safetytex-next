@@ -1,31 +1,42 @@
 import { createGlobalStyle } from "styled-components";
 
+$mobile: "480px";
+$tablet: "768px";
+$laptop: "960px";
+$desktop: "1152px";
+$widescreen: "1440px";
+$large: "1660px";
+$xlarge: "1920px";
+
+const responsive = {
+  mobile: "480px",
+  tablet: "768px",
+  laptop: "960px",
+  desktop: "1152px",
+  widescreen: "1440px",
+  large: "1660px",
+  xlarge: "1920px",
+};
+
 const primaryTheme = {
   primary: "#057E53",
   text: "#212529",
   font: "Open Sans",
-  position:"relative",
-  navLinks:"#212529"
-
-
+  position: "relative",
+  navLinks: "#212529",
+  ...responsive,
 };
 
 const secundarytheme = {
   primary: "#057E53",
   text: "#212529",
   font: "Open Sans",
-  position:"absolute",
-  navLinks:"#fff",
+  position: "absolute",
+  navLinks: "#fff",
+  ...responsive,
 };
 
 const GlobalStyles = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
-
-  html, body {
-    margin:0;
-    padding:0;
-    font-family:"Open Sans";
-  }
   .container {
     max-width:1150px;
     margin: 0 auto;

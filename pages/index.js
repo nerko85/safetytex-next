@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Hero from "../components/Hero";
 import Button from "../containers/Button/Button";
+import Facts from "../components/Facts";
+import Counter from "../components/Counter/Counter";
 
 export default function Home() {
   return (
@@ -16,7 +18,12 @@ export default function Home() {
       >
         <Button url="/proizvodi">Getting started</Button>
       </Hero>
-    
+      <Facts
+        title="Let's growth your business with us"
+        description="The four major types of construction include residential building, institutional and commercial building, specialized industrial construction."
+      >
+        <Counter />
+      </Facts>
     </>
   );
 }

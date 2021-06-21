@@ -1,15 +1,19 @@
-// import "../styles/globals.css";
+import "../styles/globals.css";
 import { ThemeProvider } from "styled-components";
-import { primaryTheme,secundarytheme, GlobalStyles } from "../styles/ThemeConfig";
+import {
+  primaryTheme,
+  secundarytheme,
+  GlobalStyles,
+} from "../styles/ThemeConfig";
 import Layout from "../components/Layout";
-import {useRouter} from 'next/router'
+import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
-  const {pathname} = router;
+  const { pathname } = router;
 
   return (
-    <ThemeProvider theme={pathname=="/"? secundarytheme:primaryTheme}>
+    <ThemeProvider theme={pathname == "/" ? secundarytheme : primaryTheme}>
       <GlobalStyles />
       <Layout>
         <Component {...pageProps} />
