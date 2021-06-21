@@ -3,11 +3,20 @@ import { createGlobalStyle } from "styled-components";
 const primaryTheme = {
   primary: "#057E53",
   text: "#212529",
-  secoundary: "blue",
   font: "Open Sans",
+  position:"relative",
+  navLinks:"#212529"
+
+
 };
 
-const secundarytheme = {};
+const secundarytheme = {
+  primary: "#057E53",
+  text: "#212529",
+  font: "Open Sans",
+  position:"absolute",
+  navLinks:"#fff",
+};
 
 const GlobalStyles = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
@@ -15,6 +24,7 @@ const GlobalStyles = createGlobalStyle`
   html, body {
     margin:0;
     padding:0;
+    font-family:"Open Sans";
   }
   .container {
     max-width:1150px;
@@ -34,12 +44,10 @@ const GlobalStyles = createGlobalStyle`
   h1 {
     font-weight: 700;
     font-size: 3rem;
-    font-family: ${({ theme }) => theme.font};
   }
   p {
     color: ${({ theme }) => theme.text};
     font-size: 18px;
-    font-family:${({ theme }) => theme.font};
     -webkit-font-smoothing: antialiased;
   }
   a {

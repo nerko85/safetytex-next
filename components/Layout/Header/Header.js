@@ -26,12 +26,12 @@ export default function Header() {
             </Link>
             <Link href="/">
               <a target="blank">
-                <FaFacebookF />
+                <FaTwitter />
               </a>
             </Link>
             <Link href="/">
               <a target="blank">
-                <FaTwitter />
+                <FaFacebookF />
               </a>
             </Link>
           </div>
@@ -53,6 +53,26 @@ export default function Header() {
           </Logo>
           <Navigation>
             <ul>
+              <li>
+                <Link href="/">
+                  <a>Početna</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/">
+                  <a>Proizvodi</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/">
+                  <a>Kontakt</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/">
+                  <a>O nama</a>
+                </Link>
+              </li>
               <li>
                 <Button>+381 61 6598696</Button>
               </li>
