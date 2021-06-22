@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Counter = styled.div`
-  padding: 2rem 0;
+  padding: 3.5rem 0;
   .statistics {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

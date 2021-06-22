@@ -1,10 +1,17 @@
 import Head from "next/head";
+import Button from "../containers/Button";
 import Hero from "../components/Hero";
-import Button from "../containers/Button/Button";
 import Facts from "../components/Facts";
-import Counter from "../components/Counter/Counter";
+import Counter from "../components/Counter";
+import About from "../components/About";
+import Services from "../components/Services";
+import Brands from "../components/Brands";
+import Image from 'next/image'
+
+import {services, brands} from '../data'
 
 export default function Home() {
+
   return (
     <>
       <Head>
@@ -24,6 +31,17 @@ export default function Home() {
       >
         <Counter />
       </Facts>
+      <About title="Let's growth your business with us" about="The four major types of construction include residential building, institutional and commercial building, specialized industrial construction.">
+        <Image src='/images/busines_meeting.png' alt="Let's growth your business with us" height="562px" width="375px" layout='intrinsic'/>
+      </About>
+      <Services title="Preduzmi mere" services={services}/>
+      <About type="partners" title="Let's growth your business with us" about="The four major types of construction include residential building, institutional and commercial building, specialized industrial construction.
+
+The four major types of construction include residential building, institutional and commercial building, specialized industrial construction.">
+        <Image src='/images/busines_meeting.png' alt="Let's growth your business with us" height="562px" width="375px" layout='intrinsic'/>
+      </About>
+      <Brands brands={brands}/>
     </>
   );
 }
+

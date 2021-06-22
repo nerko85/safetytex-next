@@ -1,4 +1,7 @@
 import "../styles/globals.css";
+import 'swiper/swiper.scss';
+import 'swiper/components/navigation/navigation.scss';
+
 import { ThemeProvider } from "styled-components";
 import {
   primaryTheme,

@@ -1,13 +1,5 @@
 import { createGlobalStyle } from "styled-components";
 
-$mobile: "480px";
-$tablet: "768px";
-$laptop: "960px";
-$desktop: "1152px";
-$widescreen: "1440px";
-$large: "1660px";
-$xlarge: "1920px";
-
 const responsive = {
   mobile: "480px",
   tablet: "768px",
@@ -25,6 +17,7 @@ const primaryTheme = {
   position: "relative",
   navLinks: "#212529",
   ...responsive,
+  transition:"all .4s ease"
 };
 
 const secundarytheme = {
@@ -34,6 +27,7 @@ const secundarytheme = {
   position: "absolute",
   navLinks: "#fff",
   ...responsive,
+  transition:"all .4s ease"
 };
 
 const GlobalStyles = createGlobalStyle`
@@ -53,8 +47,10 @@ const GlobalStyles = createGlobalStyle`
     flex-grow:1;
   }
   h1 {
-    font-weight: 700;
+    font-weight: bold;
     font-size: 3rem;
+    line-height:1.2;
+    margin:0;
   }
   p {
     color: ${({ theme }) => theme.text};
