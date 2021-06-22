@@ -59,17 +59,17 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <Link href="/">
+                <Link href="/proizvodi/">
                   <a>Proizvodi</a>
                 </Link>
               </li>
               <li>
-                <Link href="/">
+                <Link href="/kontakt">
                   <a>Kontakt</a>
                 </Link>
               </li>
               <li>
-                <Link href="/">
+                <Link href="/o-nama">
                   <a>O nama</a>
                 </Link>
               </li>

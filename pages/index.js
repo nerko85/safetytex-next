@@ -6,12 +6,13 @@ import Counter from "../components/Counter";
 import About from "../components/About";
 import Services from "../components/Services";
 import Brands from "../components/Brands";
-import Image from 'next/image'
+import Image from "next/image";
 
-import {services, brands} from '../data'
+import { services, brands, company } from "../data";
+import Map from "../components/Map";
+import ContactDetails from "../components/ContactDetails/ContactDetails";
 
 export default function Home() {
-
   return (
     <>
       <Head>
@@ -31,17 +32,37 @@ export default function Home() {
       >
         <Counter />
       </Facts>
-      <About title="Let's growth your business with us" about="The four major types of construction include residential building, institutional and commercial building, specialized industrial construction.">
-        <Image src='/images/busines_meeting.png' alt="Let's growth your business with us" height="562px" width="375px" layout='intrinsic'/>
+      <About
+        title="Let's growth your business with us"
+        about="The four major types of construction include residential building, institutional and commercial building, specialized industrial construction."
+      >
+        <Image
+          src="/images/busines_meeting.png"
+          alt="Let's growth your business with us"
+          height="562px"
+          width="375px"
+          layout="intrinsic"
+        />
       </About>
-      <Services title="Preduzmi mere" services={services}/>
-      <About type="partners" title="Let's growth your business with us" about="The four major types of construction include residential building, institutional and commercial building, specialized industrial construction.
+      <Services title="Preduzmi mere" services={services} />
+      <About
+        type="partners"
+        title="Let's growth your business with us"
+        about="The four major types of construction include residential building, institutional and commercial building, specialized industrial construction.
 
-The four major types of construction include residential building, institutional and commercial building, specialized industrial construction.">
-        <Image src='/images/busines_meeting.png' alt="Let's growth your business with us" height="562px" width="375px" layout='intrinsic'/>
+The four major types of construction include residential building, institutional and commercial building, specialized industrial construction."
+      >
+        <Image
+          src="/images/busines_meeting.png"
+          alt="Let's growth your business with us"
+          height="562px"
+          width="375px"
+          layout="intrinsic"
+        />
       </About>
-      <Brands brands={brands}/>
+      <Brands brands={brands} />
+      <Map />
+      <ContactDetails company={company} />
     </>
   );
 }
-

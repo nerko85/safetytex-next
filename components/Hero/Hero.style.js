@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Hero = styled.div`
-  min-height: ${({ small }) => (small ? "300px" : "100vh")};
+  min-height: ${({ small }) => (small ? "400px" : "100vh")};
   display: flex;
   background: url(${({ hero }) => hero}) no-repeat center;
   background-size: cover;
