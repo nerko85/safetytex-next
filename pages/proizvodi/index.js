@@ -1,6 +1,12 @@
 import Head from "next/head";
 import Hero from "../../components/Hero";
-import Button from "../../containers/Button";
+import Banner from "../../components/Banner";
+import Tag from "../../containers/Tag";
+import Spacer from "../../containers/Spacer";
+import ProductSlider from "../../components/ProductSlider/ProductSlider";
+
+import { products } from "../../data";
+import styled from "styled-components";
 
 export default function Proizvodi() {
   return (
@@ -16,6 +22,27 @@ export default function Proizvodi() {
         hero="/images/blackstore1.png"
         small
       ></Hero>
+      <StyledProducts>
+        <ProductSlider products={products} aplay={true}>
+          <Tag>For You</Tag>
+          <h2>Top Featured Products</h2>
+          <Spacer />
+        </ProductSlider>
+
+        <Banner image="/images/266.png" />
+        <Banner image="/images/banner67.png" />
+
+        <ProductSlider products={products} aplay={true}>
+          <Tag>For You</Tag>
+          <h2>New Products</h2>
+          <Spacer />
+        </ProductSlider>
+      </StyledProducts>
     </>
   );
 }
+
+const StyledProducts = styled.div`
+  background: whitesmoke;
+  padding: 5rem 0;
+`;
