@@ -11,26 +11,31 @@ const responsive = {
 };
 
 const primaryTheme = {
+  background: "whitesmoke",
   primary: "#057E53",
   text: "#212529",
   font: "Open Sans",
   position: "relative",
   navLinks: "#212529",
   ...responsive,
-  transition:"all .4s ease"
+  transition: "all .4s ease",
 };
 
 const secundarytheme = {
+  background: "#fff",
   primary: "#057E53",
   text: "#212529",
   font: "Open Sans",
   position: "absolute",
   navLinks: "#fff",
   ...responsive,
-  transition:"all .4s ease"
+  transition: "all .4s ease",
 };
 
 const GlobalStyles = createGlobalStyle`
+  ${"" /* body {
+    background:${({ theme }) => theme.background}
+  } */}
   .container {
     max-width:1150px;
     margin: 0 auto;
@@ -52,6 +57,11 @@ const GlobalStyles = createGlobalStyle`
     line-height:1.2;
     margin:0;
   }
+
+  h2 {
+    margin-top:0;
+  }
+
   p {
     color: ${({ theme }) => theme.text};
     font-size: 18px;

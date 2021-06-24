@@ -1,11 +1,12 @@
 import Head from "next/head";
 import Hero from "../../components/Hero";
 import Banner from "../../components/Banner";
+import CategoryGrid from "../../components/CategoryGrid";
 import Tag from "../../containers/Tag";
 import Spacer from "../../containers/Spacer";
 import ProductSlider from "../../components/ProductSlider/ProductSlider";
 
-import { products } from "../../data";
+import { products, categories } from "../../data";
 import styled from "styled-components";
 
 export default function Proizvodi() {
@@ -23,26 +24,36 @@ export default function Proizvodi() {
         small
       ></Hero>
       <StyledProducts>
-        <ProductSlider products={products} aplay={true}>
-          <Tag>For You</Tag>
-          <h2>Top Featured Products</h2>
-          <Spacer />
-        </ProductSlider>
+        <div className="content">
+          <CategoryGrid categories={categories}>
+            <Tag>Shop by</Tag>
+            <h2>Categories</h2>
+            <Spacer />
+          </CategoryGrid>
+          <ProductSlider products={products} aplay={true} nav={false}>
+            <Tag>For You</Tag>
+            <h2>Top Featured Products</h2>
+            <Spacer />
+          </ProductSlider>
 
-        <Banner image="/images/266.png" />
-        <Banner image="/images/banner67.png" />
+          <Banner image="/images/266.png" />
+          <Banner image="/images/banner67.png" />
 
-        <ProductSlider products={products} aplay={true}>
-          <Tag>For You</Tag>
-          <h2>New Products</h2>
-          <Spacer />
-        </ProductSlider>
+          <ProductSlider products={products} aplay={true} nav={true}>
+            <Tag>For You</Tag>
+            <h2>New Products</h2>
+            <Spacer />
+          </ProductSlider>
+        </div>
       </StyledProducts>
     </>
   );
 }
 
 const StyledProducts = styled.div`
-  background: whitesmoke;
   padding: 5rem 0;
+  .content {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
 `;
