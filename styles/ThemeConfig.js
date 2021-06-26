@@ -10,25 +10,34 @@ const responsive = {
   xlarge: "1920px",
 };
 
-const primaryTheme = {
-  background: "whitesmoke",
+const colors = {
   primary: "#057E53",
-  text: "#212529",
+  darkGray: "#212529",
+  lightGray: "#979a9c",
+  white: "#fff",
+};
+
+const primaryTheme = {
+  background: colors.lightGray,
+  primary: colors.primary,
+  navLinks: colors.darkGray,
+  text: colors.darkGray,
   font: "Open Sans",
   position: "relative",
-  navLinks: "#212529",
   ...responsive,
+  ...colors,
   transition: "all .4s ease",
 };
 
 const secundarytheme = {
-  background: "#fff",
-  primary: "#057E53",
-  text: "#212529",
+  background: colors.white,
+  primary: colors.primary,
+  navLinks: colors.white,
+  text: colors.darkGray,
   font: "Open Sans",
   position: "absolute",
-  navLinks: "#fff",
   ...responsive,
+  ...colors,
   transition: "all .4s ease",
 };
 

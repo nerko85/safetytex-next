@@ -48,12 +48,126 @@ const brands = [
   },
 ];
 
-const company = {
-  name: "SafetyTex",
-  address: "Iberska bb 36320 Tutin, Srbija",
-  phone: "+381 61 6598696",
-  email: "safetytexbg@gmail.com",
-};
+const company = [
+  {
+    sys: {
+      id: "1",
+    },
+    fields: {
+      name: "SafetyTex",
+      address: "Iberska bb 36320 Tutin, Srbija",
+      phone: "+381 61 6598696",
+      email: "safetytexbg@gmail.com",
+    },
+  },
+];
+
+const staff = [
+  {
+    sys: {
+      id: "1",
+    },
+    fields: {
+      firstName: "Enis",
+      lastName: "Salihović",
+      position: "CEO",
+      phone: "+381 61 6598696",
+      email: "safetytexbg@gmail.com",
+      images: [
+        {
+          fields: {
+            file: {
+              url: "/images/viberpics.png",
+            },
+          },
+        },
+      ],
+    },
+  },
+];
+
+const clients = [
+  {
+    sys: {
+      id: "1",
+    },
+    fields: {
+      person: "My Client",
+      position: "Enterprenuer",
+      impression:
+        "Blueberries are perennial flowering plants with blue or purple berries. To maintain top quality, berries are harvested at least every other day.",
+      images: [
+        {
+          fields: {
+            file: {
+              url: "/images/smiling-man.png",
+            },
+          },
+        },
+      ],
+    },
+  },
+  {
+    sys: {
+      id: "2",
+    },
+    fields: {
+      person: "My Client",
+      position: "Enterprenuer",
+      impression:
+        "Blueberries are perennial flowering plants with blue or purple berries. To maintain top quality, berries are harvested at least every other day.",
+      images: [
+        {
+          fields: {
+            file: {
+              url: "/images/smiling-man.png",
+            },
+          },
+        },
+      ],
+    },
+  },
+  {
+    sys: {
+      id: "3",
+    },
+    fields: {
+      person: "My Client",
+      position: "Enterprenuer",
+      impression:
+        "Blueberries are perennial flowering plants with blue or purple berries. To maintain top quality, berries are harvested at least every other day.",
+      images: [
+        {
+          fields: {
+            file: {
+              url: "/images/smiling-man.png",
+            },
+          },
+        },
+      ],
+    },
+  },
+  {
+    sys: {
+      id: "4",
+    },
+    fields: {
+      person: "My Client",
+      position: "Enterprenuer",
+      impression:
+        "Blueberries are perennial flowering plants with blue or purple berries. To maintain top quality, berries are harvested at least every other day.",
+      images: [
+        {
+          fields: {
+            file: {
+              url: "/images/smiling-man.png",
+            },
+          },
+        },
+      ],
+    },
+  },
+];
 
 const products = [
   {
@@ -214,4 +328,4 @@ const categories = [
   },
 ];
 
-export { services, brands, company, products, categories };
+export { services, brands, company, products, categories, staff, clients };

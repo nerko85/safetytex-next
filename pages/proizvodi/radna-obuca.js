@@ -1,8 +1,10 @@
 import Head from "next/head";
-import Hero from "../../components/Hero";
 import ProductLayout from "../../components/Layout/ProductsLayout";
 import ProductsGrid from "../../components/ProductsGrid";
 import Sidebar from "../../components/Sidebar";
+import Banner from "../../components/Banner/Banner";
+import Button from "../../containers/Button";
+
 import { products, categories } from "../../data";
 
 export default function Proizvodi() {
@@ -15,7 +17,15 @@ export default function Proizvodi() {
       </Head>
 
       <ProductLayout>
-        <Sidebar categories={categories}></Sidebar>
+        <Sidebar categories={categories}>
+          <Banner format="portrait" image="/images/26.png">
+            <p>
+              Pritisni dugme <strong>"DOWNLOAD"</strong> da bi ste preuzeli
+              najnoviji katalog
+            </p>
+            <Button url="#">Download</Button>
+          </Banner>
+        </Sidebar>
         <ProductsGrid columns={3} rows={4} products={products} />
       </ProductLayout>
     </>

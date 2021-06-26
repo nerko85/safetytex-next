@@ -10,7 +10,7 @@ import {
 import Input from "../../containers/Input";
 import Search from "../../containers/Search";
 
-export default function Sidebar({ categories, banner }) {
+export default function Sidebar({ categories, children }) {
   const router = useRouter();
   const { pathname } = router;
   const regex = pathname.match(/[^/]+$/)[0];
@@ -84,6 +84,7 @@ export default function Sidebar({ categories, banner }) {
           </FilterGroup>
         </form>
       </Filters>
+      {children}
     </StyledSidebar>
   );
 }

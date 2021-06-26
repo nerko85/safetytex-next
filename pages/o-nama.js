@@ -1,7 +1,10 @@
 import Head from "next/head";
 import Hero from "../components/Hero";
 
-import { company } from "../data";
+import { company, staff, clients } from "../data";
+import OurOffer from "../components/OurOffer/OurOffer";
+import ClientsSlider from "../components/ClientsSlider/ClientsSlider";
+import ContactForm from "../components/ContactForm/ContactForm";
 
 export default function Home() {
   return (
@@ -17,6 +20,16 @@ export default function Home() {
         hero="/images/banner1.png"
         small
       ></Hero>
+      <OurOffer staff={staff[0]} />
+      <ClientsSlider clients={clients} nav={true}>
+        <h1>Our clients</h1>
+        <p>
+          Blueberries are perennial flowering plants with blue or purple
+          berries. To maintain top quality, berries are harvested at least every
+          other day.
+        </p>
+      </ClientsSlider>
+      <ContactForm />
     </>
   );
 }

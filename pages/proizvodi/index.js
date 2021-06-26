@@ -4,6 +4,7 @@ import Banner from "../../components/Banner";
 import CategoryGrid from "../../components/CategoryGrid";
 import Tag from "../../containers/Tag";
 import Spacer from "../../containers/Spacer";
+import Button from "../../containers/Button";
 import ProductSlider from "../../components/ProductSlider/ProductSlider";
 
 import { products, categories } from "../../data";
@@ -36,7 +37,13 @@ export default function Proizvodi() {
             <Spacer />
           </ProductSlider>
 
-          <Banner image="/images/266.png" />
+          <Banner image="/images/266.png">
+            <p>
+              Pritisni dugme <strong>"DOWNLOAD"</strong> da bi ste preuzeli
+              najnoviji katalog
+            </p>
+            <Button url="#">Download</Button>
+          </Banner>
           <Banner image="/images/banner67.png" />
 
           <ProductSlider products={products} aplay={true} nav={true}>
