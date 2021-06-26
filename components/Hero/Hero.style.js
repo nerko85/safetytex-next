@@ -6,6 +6,10 @@ const Hero = styled.div`
   background: url(${({ hero }) => hero}) no-repeat center;
   background-size: cover;
 
+  @media (max-width: ${({ theme }) => theme.tablet}) {
+    background-position-x: left;
+  }
+
   .content {
     width: 100%;
     align-self: center;

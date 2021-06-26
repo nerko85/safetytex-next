@@ -52,6 +52,7 @@ export default function Proizvodi() {
 
 const StyledProducts = styled.div`
   padding: 5rem 0;
+  background: whitesmoke;
   .content {
     max-width: 1000px;
     margin: 0 auto;

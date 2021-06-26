@@ -11,12 +11,13 @@ export default function CategoryGrid({ children, categories }) {
         <Grid>
           {categories &&
             categories.map((category) => {
-              const { name, icon } = category.fields;
+              const { name, icon, slug } = category.fields;
               return (
                 <CategoryCard
                   key={category.sys.id}
                   name={name}
                   icon={icon[0].fields.file.url}
+                  slug={slug}
                 />
               );
             })}

@@ -64,7 +64,7 @@ const products = [
       name: "hibernus",
       slug: "hibernus",
       price: 6900,
-      status: "available",
+      status: "available (Na stanju)",
       topSelling: false,
       featured: true,
       description:
@@ -88,11 +88,11 @@ const products = [
       name: "Neon tregerice",
       slug: "neon-tregerice",
       price: 4800,
-      status: "available",
+      status: "available (Na stanju)",
       topSelling: false,
       featured: true,
       description:
-        "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
+        "The four major types of construction include residential building, specialized industrial construction",
       images: [
         {
           fields: {
@@ -112,11 +112,11 @@ const products = [
       name: "Urban Plus bluza",
       slug: "urban-plus-bluza",
       price: 6500,
-      status: "available",
+      status: "available (Na stanju)",
       topSelling: false,
       featured: true,
       description:
-        "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
+        "The four major types of construction include residential building, specialized industrial construction",
       images: [
         {
           fields: {
@@ -139,12 +139,19 @@ const categories = [
       name: "Radna Odjeca",
       slug: "radna-odjeca",
       description:
-        "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
+        "The four major types of construction include residential building, specialized industrial construction",
       icon: [
         {
           fields: {
             file: {
               url: "/images/wardrobe.png",
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: "/images/odjeca.svg",
             },
           },
         },
@@ -159,12 +166,19 @@ const categories = [
       name: "Radna Obuca",
       slug: "radna-obuca",
       description:
-        "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
+        "The four major types of construction include residential building, specialized industrial construction",
       icon: [
         {
           fields: {
             file: {
               url: "/images/group424.png",
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: "/images/obuca.svg",
             },
           },
         },
@@ -179,12 +193,19 @@ const categories = [
       name: "Tekstil",
       slug: "tekstil",
       description:
-        "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
+        "The four major types of construction include residential building, specialized industrial construction",
       icon: [
         {
           fields: {
             file: {
               url: "/images/fabric.png",
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: "/images/textil.svg",
             },
           },
         },

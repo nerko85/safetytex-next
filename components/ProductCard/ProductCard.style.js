@@ -9,12 +9,14 @@ const Card = styled.div`
   background: #fff;
   word-wrap: break-word;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 10px;
+  padding: 4rem 1rem;
   position: relative;
 
   .badge {
     position: absolute;
+    top: 20px;
+    left: 15px;
     display: inline-block;
     padding: 3px 10px;
     background: ${({ theme }) => theme.primary};
@@ -29,18 +31,30 @@ const Card = styled.div`
     color: gray;
     text-transform: capitalize;
     margin-bottom: 0;
+    font-size: 14px;
   }
 
   h3 {
-    margin: 1rem;
+    margin: 0.6rem;
+    font-weight: 500;
+    text-transform: capitalize;
   }
 
   h4 {
-    margin: 2rem 0 3rem;
-    font-size: 1.5rem;
-    font-weight: 500;
+    margin: 1rem 0 0 0;
+    font-size: 1.3rem;
+    font-weight: bold;
     line-height: 1.2;
     color: ${({ theme }) => theme.primary};
+  }
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    width: 100%;
+    padding: 2rem 1rem;
+
+    img {
+      object-fit: contain;
+    }
   }
 `;
 

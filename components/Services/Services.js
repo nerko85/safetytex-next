@@ -11,9 +11,18 @@ export default function Services({ title, services }) {
         <h1>{title}</h1>
         <div className="cards">
           {services &&
-            services.map((service, index) => (
-              <Card key={index} service={service} />
-            ))}
+            services.map((service) => {
+              const { name, description, slug, icon } = service.fields;
+              return (
+                <Card
+                  key={service.sys.id}
+                  name={name}
+                  description={description}
+                  icon={icon[1].fields.file.url}
+                  slug={slug}
+                />
+              );
+            })}
         </div>
       </div>
     </StyledServices>

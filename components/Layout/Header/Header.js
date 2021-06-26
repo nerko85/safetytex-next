@@ -74,7 +74,7 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <Button>+381 61 6598696</Button>
+                <Button url="tel:+381616598696">+381 61 6598696</Button>
               </li>
             </ul>
           </Navigation>

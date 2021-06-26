@@ -35,7 +35,8 @@ const StyledSlider = styled.div`
   }
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
-    margin: 0 2rem !important;
+    ${"" /* margin: 0 2rem !important; */}
+    margin: 0;
   }
 `;
 

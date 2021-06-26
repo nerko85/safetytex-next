@@ -33,6 +33,7 @@ export default function ProductSlider({ products, children, aplay, nav }) {
           breakpoints={{
             400: {
               slidesPerView: 1,
+              spaceBetween: 0,
             },
             640: {
               slidesPerView: 2,

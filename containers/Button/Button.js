@@ -5,7 +5,9 @@ import Link from "next/link";
 export default function Button({ type, url, children }) {
   return (
     <StyledButton type={type}>
-      <Link href={url}>{children}</Link>
+      <Link href={url}>
+        <a>{children}</a>
+      </Link>
     </StyledButton>
   );
 }

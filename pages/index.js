@@ -8,7 +8,7 @@ import Services from "../components/Services";
 import Brands from "../components/Brands";
 import Image from "next/image";
 
-import { services, brands, company } from "../data";
+import { brands, company, categories } from "../data";
 import Map from "../components/Map";
 import ContactDetails from "../components/ContactDetails/ContactDetails";
 
@@ -44,7 +44,7 @@ export default function Home() {
           layout="intrinsic"
         />
       </About>
-      <Services title="Preduzmi mere" services={services} />
+      <Services title="Preduzmi mere" services={categories} />
       <About
         type="partners"
         title="Let's growth your business with us"
