@@ -6,14 +6,7 @@ import Search from "../../containers/Search";
 import { useProducts } from "../../context/ProductsContext";
 
 export default function Filters({ type }) {
-  const [filters, setFilters] = useState({
-    style: [],
-    type: [],
-  });
-  const { products, handleChange } = useProducts();
-  const handleSearch = (e) => {
-    console.log(e.target.name, e.target.value);
-  };
+  const { handleChange, handleSearch } = useProducts();
 
   function renderSwitch(param) {
     switch (param) {
@@ -22,7 +15,7 @@ export default function Filters({ type }) {
           <FilterGroup>
             <h3>Tip Proizvoda</h3>
             <form>
-              <Search onChange={handleSearch} />
+              <Search onKeyUp={handleSearch} />
               <Input
                 type="checkbox"
                 label="Samo bluze"

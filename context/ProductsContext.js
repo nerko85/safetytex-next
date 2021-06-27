@@ -65,6 +65,22 @@ class ProductsProvider extends Component {
     }
   };
 
+  // Returns search results - have to fill this
+  handleSearch = (e) => {
+    const { products } = this.state;
+    var regex = new RegExp(e.target.value, "gi");
+    let tempProducts;
+    if (e.target.value.length) {
+      tempProducts = products.filter((product) => product.name.match(regex));
+    } else {
+      tempProducts = products;
+    }
+    this.setState({
+      sortedProducts: tempProducts,
+    });
+  };
+
+  // formats the data from contentfull
   formatData(items) {
     let tempItems = items.map((item) => {
       let id = item.sys.id;
@@ -75,21 +91,16 @@ class ProductsProvider extends Component {
     return tempItems;
   }
 
+  // Getting one product for static page generation
   getProduct = (slug) => {
     const products = [...this.state.products];
     let tempProduct = products.find((room) => room.slug === slug);
     return tempProduct;
   };
 
+  // Filtering products based on filter on the website
   filterProducts = () => {
-    const {
-      products,
-      type,
-      style,
-      minPrice,
-      maxPrice,
-      sortedProducts,
-    } = this.state;
+    const { products, type, style, minPrice, maxPrice } = this.state;
 
     let tempProducts = [...products];
 
@@ -124,6 +135,7 @@ class ProductsProvider extends Component {
           ...this.state,
           getProduct: this.getProduct,
           handleChange: this.handleChange,
+          handleSearch: this.handleSearch,
         }}
       >
         <div>{this.props.children}</div>

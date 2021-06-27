@@ -10,7 +10,7 @@ import { categories } from "../../data";
 import { useProducts } from "../../context/ProductsContext";
 
 export default function Proizvodi() {
-  const { products, loading } = useProducts();
+  const { sortedProducts, loading } = useProducts();
   return (
     <>
       <Head>
@@ -32,7 +32,7 @@ export default function Proizvodi() {
         {loading ? (
           <div>Loading...</div>
         ) : (
-          <ProductsGrid columns={3} rows={4} products={products} />
+          <ProductsGrid columns={3} rows={4} products={sortedProducts} />
         )}
       </ProductLayout>
     </>

@@ -233,8 +233,8 @@ const products = [
       status: "available (Na stanju)",
       topSelling: false,
       featured: true,
-      type: "",
-      style: "",
+      type: "bluze",
+      style: "urban",
       description:
         "The four major types of construction include residential building, specialized industrial construction",
       images: [

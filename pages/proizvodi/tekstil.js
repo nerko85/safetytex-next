@@ -9,7 +9,7 @@ import { products, categories } from "../../data";
 import { useProducts } from "../../context/ProductsContext";
 
 export default function Proizvodi() {
-  const { products } = useProducts();
+  const { sortedProducts, loading } = useProducts();
   return (
     <>
       <Head>
@@ -28,7 +28,11 @@ export default function Proizvodi() {
             <Button url="#">Download</Button>
           </Banner>
         </Sidebar>
-        <ProductsGrid columns={3} rows={4} products={products} />
+        {loading ? (
+          <div>Loading...</div>
+        ) : (
+          <ProductsGrid columns={3} rows={4} products={sortedProducts} />
+        )}
       </ProductLayout>
     </>
   );
