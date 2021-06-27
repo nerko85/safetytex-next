@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 const Filters = styled.div`
-  backgound: red;
+  @media (max-width: ${({ theme }) => theme.tablet}) {
+    display: none;
+  }
 `;
 
 const FilterGroup = styled.div`

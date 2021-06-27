@@ -5,9 +5,12 @@ import Sidebar from "../../components/Sidebar";
 import Banner from "../../components/Banner/Banner";
 import Button from "../../containers/Button";
 
-import { products, categories } from "../../data";
+import { categories } from "../../data";
+import { useProducts } from "../../context/ProductsContext";
 
 export default function Proizvodi() {
+  const { products, sortedProducts, loading } = useProducts();
+
   return (
     <>
       <Head>
@@ -26,7 +29,11 @@ export default function Proizvodi() {
             <Button url="#">Download</Button>
           </Banner>
         </Sidebar>
-        <ProductsGrid columns={3} rows={4} products={products} />
+        {loading ? (
+          <div>Loading...</div>
+        ) : (
+          <ProductsGrid columns={3} rows={4} products={sortedProducts} />
+        )}
       </ProductLayout>
     </>
   );

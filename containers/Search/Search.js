@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Search as StyledSerch } from "./Search.style";
 
-export default function Search({}) {
+export default function Search({ onKeyUp }) {
   return (
     <StyledSerch>
       <div className="icon">
@@ -15,9 +15,10 @@ export default function Search({}) {
       </div>
       <input
         type="text"
-        name="search"
-        id="search"
+        name="name"
+        id="name"
         placeholder="Trazi po zelji..."
+        onKeyUp={onKeyUp}
       />
     </StyledSerch>
   );

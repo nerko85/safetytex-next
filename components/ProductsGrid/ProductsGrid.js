@@ -34,11 +34,11 @@ export default function ProductsGrid({ columns, rows, products, take }) {
           <div>Loading</div>
         ) : (
           products.map((product) => {
-            const { images, name, status, price } = product.fields;
+            const { id, images, name, status, price } = product;
             return (
               <ProductCard
-                key={product.sys.id}
-                image={images[0].fields.file.url}
+                key={id}
+                image={images[0]}
                 name={name}
                 status={status}
                 price={price}

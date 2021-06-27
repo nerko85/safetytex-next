@@ -51,11 +51,11 @@ export default function ProductSlider({ products, children, aplay, nav }) {
         >
           {products &&
             products.map((product, index) => {
-              const { images, name, status, price } = product.fields;
+              const { images, name, status, price } = product;
               return (
                 <SwiperSlide key={index}>
                   <ProductCard
-                    image={images[0].fields.file.url}
+                    image={images[0]}
                     name={name}
                     status={status}
                     price={price}

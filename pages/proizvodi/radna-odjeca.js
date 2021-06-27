@@ -3,9 +3,14 @@ import Hero from "../../components/Hero";
 import ProductLayout from "../../components/Layout/ProductsLayout";
 import ProductsGrid from "../../components/ProductsGrid";
 import Sidebar from "../../components/Sidebar";
-import { products, categories } from "../../data";
+import Banner from "../../components/Banner/Banner";
+import Button from "../../containers/Button";
+
+import { categories } from "../../data";
+import { useProducts } from "../../context/ProductsContext";
 
 export default function Proizvodi() {
+  const { products, loading } = useProducts();
   return (
     <>
       <Head>
@@ -15,8 +20,20 @@ export default function Proizvodi() {
       </Head>
 
       <ProductLayout>
-        <Sidebar categories={categories}></Sidebar>
-        <ProductsGrid columns={3} rows={4} products={products} />
+        <Sidebar categories={categories}>
+          <Banner format="portrait" image="/images/26.png">
+            <p>
+              Pritisni dugme <strong>"DOWNLOAD"</strong> da bi ste preuzeli
+              najnoviji katalog
+            </p>
+            <Button url="#">Download</Button>
+          </Banner>
+        </Sidebar>
+        {loading ? (
+          <div>Loading...</div>
+        ) : (
+          <ProductsGrid columns={3} rows={4} products={products} />
+        )}
       </ProductLayout>
     </>
   );

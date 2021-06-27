@@ -7,10 +7,13 @@ import Spacer from "../../containers/Spacer";
 import Button from "../../containers/Button";
 import ProductSlider from "../../components/ProductSlider/ProductSlider";
 
-import { products, categories } from "../../data";
+import { categories } from "../../data";
 import styled from "styled-components";
 
+import { useProducts } from "../../context/ProductsContext";
+
 export default function Proizvodi() {
+  const { products } = useProducts();
   return (
     <>
       <Head>

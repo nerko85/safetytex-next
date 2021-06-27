@@ -10,14 +10,15 @@ const Banner = styled.div`
   border-radius: 20px;
   margin: 5rem 0;
   display: flex;
-  flex-direction: ${({ format }) =>
-    format === "landscape" ? "row" : "column"};
+  flex-direction: column;
   justify-content: flex-end;
-  align-items: flex-start;
+  align-items: ${({ format }) =>
+    format === "landscape" ? "flex-end" : "flex-start"};
 
   p {
-    max-width: 90%;
+    max-width: ${({ format }) => (format === "landscape" ? "200px" : "90%")};
     font-size: 1rem;
+    text-align: ${({ format }) => (format === "landscape" ? "right" : "left")};
   }
 `;
 

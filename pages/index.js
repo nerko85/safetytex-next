@@ -10,7 +10,7 @@ import Image from "next/image";
 
 import { brands, company, categories } from "../data";
 import Map from "../components/Map";
-import ContactDetails from "../components/ContactDetails/ContactDetails";
+import ContactDetails from "../components/ContactDetails";
 
 export default function Home() {
   return (
