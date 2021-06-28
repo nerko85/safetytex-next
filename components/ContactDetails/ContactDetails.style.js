@@ -8,9 +8,19 @@ const Details = styled.div`
     padding: 0.6rem 2.5rem;
     margin: 2rem 0;
     display: flex;
+    align-items: center;
+
+    svg {
+      font-size: 3rem;
+      color: ${({ color }) => color};
+    }
 
     .info {
       margin-left: 1rem;
+
+      h4 {
+        margin: 0;
+      }
     }
 
     &:first-child {

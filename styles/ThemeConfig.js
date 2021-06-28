@@ -65,6 +65,10 @@ const GlobalStyles = createGlobalStyle`
     font-size: 3rem;
     line-height:1.2;
     margin:0;
+
+    @media(max-width:${({ theme }) => theme.tablet}){
+      font-size:2.2rem;
+    }
   }
 
   h2 {

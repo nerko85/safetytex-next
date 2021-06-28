@@ -118,6 +118,7 @@ const NewsLetter = styled.div`
       font-size: 12px;
       text-transform: uppercase;
       color: ${({ theme }) => theme.primary};
+      cursor: pointer;
     }
   }
 

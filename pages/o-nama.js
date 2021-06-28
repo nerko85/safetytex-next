@@ -4,7 +4,7 @@ import Hero from "../components/Hero";
 import { company, staff, clients } from "../data";
 import OurOffer from "../components/OurOffer/OurOffer";
 import ClientsSlider from "../components/ClientsSlider/ClientsSlider";
-import ContactForm from "../components/ContactForm/ContactForm";
+import ContactUs from "../components/ContactUs";
 
 export default function Home() {
   return (
@@ -29,7 +29,7 @@ export default function Home() {
           other day.
         </p>
       </ClientsSlider>
-      <ContactForm />
+      <ContactUs />
     </>
   );
 }

@@ -74,7 +74,7 @@ export default function ClientsSlider({ clients, children, aplay, nav }) {
               </div>
             </>
           )}
-          <div class="swiper-pagination"></div>
+          <div className="swiper-pagination"></div>
         </Swiper>
       </div>
     </StyledSlider>

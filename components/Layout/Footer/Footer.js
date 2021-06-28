@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -8,8 +8,47 @@ import {
   NewsLetter,
 } from "./Footer.styled";
 import { FaInstagram, FaTwitter, FaFacebookF } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 export default function Footer() {
+  const [message, setMessage] = useState(null);
+  let newsForm = useRef(null);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    let formData = {};
+    Array.from(e.currentTarget.elements).forEach((field) => {
+      if (!field.name) return;
+      if (!field.value.length) {
+        toast.warn("Molimo unesite validnu email adresu", {
+          position: toast.POSITION.BOTTOM_RIGHT,
+          autoClose: 3000,
+        });
+        return;
+      }
+      formData[field.name] = field.value;
+    });
+
+    if (!formData.email) return;
+
+    fetch("/api/newsletter", {
+      method: "POST",
+      body: JSON.stringify(formData),
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        setMessage(res.message);
+      });
+
+    toast.info(message, {
+      position: toast.POSITION.BOTTOM_RIGHT,
+      autoClose: 3000,
+      onClose: () => {
+        setMessage(null);
+        newsForm.reset();
+      },
+    });
+  };
   return (
     <StyledFooter>
       <div className="container">
@@ -79,10 +118,18 @@ export default function Footer() {
               Pretplatite se na naš newsletter kako <br />
               bi dobili ažurirane novosti o nama.
             </p>
-            <form action="">
+            <form
+              action="/api/newsletter"
+              onSubmit={handleSubmit}
+              ref={(el) => (newsForm = el)}
+            >
               <div className="input-wrapp">
                 <div>
-                  <input type="text" placeholder="Email Address" />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email Address"
+                  />
                 </div>
                 <div>
                   <button>Preplatite se</button>

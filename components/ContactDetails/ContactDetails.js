@@ -1,29 +1,34 @@
 import React from "react";
 import Image from "next/image";
 import { Details } from "./ContactDetails.style";
+import { FaPhoneSquareAlt, FaCommentDots } from "react-icons/fa";
 
 export default function ContactDetails({ company }) {
+  console.log(company);
+  const { address, phone, email } = company.fields;
   return (
     <div className="container">
       <Details>
         <div className="card">
           <div className="info">
             <h4>Address:</h4>
-            <p>{company.address}</p>
+            <p>{address}</p>
           </div>
         </div>
         <div className="card">
-          <Image src="/images/telephone.svg" height="37px" width="37px" />
+          {/* <Image src="/images/telephone.svg" height="37px" width="37px" /> */}
+          <FaPhoneSquareAlt color="green" />
           <div className="info">
             <h4>Brojevi telefona</h4>
-            {<p>{company.phone}</p>}
+            {<p>{phone}</p>}
           </div>
         </div>
         <div className="card">
-          <Image src="/images/chat.svg" height="37px" width="37px" />
+          {/* <Image src="/images/chat.svg" height="37px" width="37px" /> */}
+          <FaCommentDots color="#000" />
           <div className="info">
             <h4>Email:</h4>
-            <p>{company.email}</p>
+            <p>{email}</p>
           </div>
         </div>
       </Details>
