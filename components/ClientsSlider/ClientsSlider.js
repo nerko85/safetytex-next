@@ -32,7 +32,7 @@ export default function ClientsSlider({ clients, children, aplay, nav }) {
           }
           pagination={true}
           breakpoints={{
-            400: {
+            200: {
               slidesPerView: 1,
               spaceBetween: 0,
             },
