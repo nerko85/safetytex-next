@@ -29,20 +29,22 @@ class ProductsProvider extends Component {
       this.setState({ loading: false });
     }, 2000);
   }
-  
 
   handleChange = (e) => {
-    if(!e) {
-      this.setState({sortedProducts:this.formatData(products)});
+    if (!e) {
+      this.setState({
+        sortedProducts: this.formatData(products),
+        type: [],
+        style: [],
+        minPrice: 0,
+        maxPrice: 0,
+      });
       return;
     }
-
 
     const target = e.target;
     const value = target.value;
     const name = target.name;
-
-
 
     if (target.type === "radio") {
       let tempValue = value.split(",");
@@ -53,7 +55,6 @@ class ProductsProvider extends Component {
         },
         this.filterProducts
       );
-   
     } else {
       if (target.checked) {
         this.setState(
