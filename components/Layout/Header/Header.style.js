@@ -10,6 +10,26 @@ const Header = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow-y: hidden;
+
+    .hambMenu {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      position: absolute;
+      top: 80px;
+      right: 40px;
+      color: ${({ theme, active }) =>
+        active ? theme.darkGray : theme.navLinks};
+      z-index: 99999999;
+    }
+
+    @media (max-width: ${({ theme }) => theme.tablet}) {
+      .hambMenu {
+        display: block;
+      }
+    }
   }
 `;
 
@@ -31,6 +51,12 @@ const Logo = styled.h1`
     align-items: center;
     gap: 1rem;
   }
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    a img.typography {
+      display: none !important;
+    }
+  }
 `;
 
 const Navigation = styled.nav`
@@ -51,7 +77,33 @@ const Navigation = styled.nav`
   }
 
   @media (max-width: ${({ theme }) => theme.tablet}) {
-    display: none;
+    display: ${({ active }) => (active ? "flex" : "none")};
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    top: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+
+    ul {
+      flex-direction: column;
+      padding: 0;
+      gap: 2rem;
+
+      li a {
+        text-transform: uppercase;
+        font-weight: bolder;
+        font-size: 1.2rem;
+        color: #212529;
+      }
+
+      & li:last-child a {
+        color: #fff;
+      }
+    }
   }
 `;
 

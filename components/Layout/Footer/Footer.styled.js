@@ -26,8 +26,11 @@ const Footer = styled.footer`
     color: #fff;
   }
 
-  p {
+  p,
+  a {
     color: #fff;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
   }
 `;
 

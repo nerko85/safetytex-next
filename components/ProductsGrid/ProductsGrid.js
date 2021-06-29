@@ -1,12 +1,39 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { ProductsGrid as Grid, FilterTop } from "./ProductsGrid.style";
 import ProductCard from "../ProductCard";
 import Select from "../../containers/Select";
 
 export default function ProductsGrid({ columns, rows, products, take }) {
+  const [sorted, setSorted] = useState([...products]);
+
+  useEffect(() => {
+    console.log("test");
+  }, [sorted]);
+
   const handleChange = (e) => {
-    console.log(e.target.value);
+    const value = e.target.value;
+    setSorted(sortProducts(value));
   };
+
+  const sortProducts = (value) => {
+    return products.sort((a, b) => {
+      if (value === "asc") {
+        if (a.name > b.name) {
+          return -1;
+        } else {
+          return 1;
+        }
+      } else {
+        if (a.name > b.name) {
+          return 1;
+        } else {
+          return -1;
+        }
+      }
+    });
+  };
+
+  console.log(sorted);
 
   return (
     <div className="content">
@@ -33,7 +60,7 @@ export default function ProductsGrid({ columns, rows, products, take }) {
         {!products ? (
           <div>Loading</div>
         ) : (
-          products.map((product) => {
+          sorted.map((product) => {
             const { id, images, name, status, price } = product;
             return (
               <ProductCard

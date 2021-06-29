@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Header as StyledHeader,
   HeaderTop,
@@ -6,16 +6,30 @@ import {
   Navigation,
 } from "./Header.style";
 import Image from "next/image";
-import { FaInstagram, FaFacebookF, FaTwitter } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaFacebookF,
+  FaTwitter,
+  FaBars,
+  FaTimes,
+} from "react-icons/fa";
+
+import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 import Button from "../../../containers/Button/Button";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
+// const handleClick = () => {
+//   console.log("clicked");
+// };
+
 export default function Header() {
+  const [active, setActive] = useState(false);
   const router = useRouter();
   const { pathname } = router;
+  // router.events.on("routeChangeComplete", setActive(false));
   return (
-    <StyledHeader>
+    <StyledHeader active={active}>
       <HeaderTop>
         <div className="container">
           <div className="icons">
@@ -29,7 +43,7 @@ export default function Header() {
                 <FaTwitter />
               </a>
             </Link>
-            <Link href="/">
+            <Link href="https://www.facebook.com/SafetyTex-100467918184328/?ref=py_c">
               <a target="blank">
                 <FaFacebookF />
               </a>
@@ -44,14 +58,24 @@ export default function Header() {
               <a>
                 <Image src="/logo.svg" height="50px" width="50px" />
                 {pathname === "/" ? (
-                  <Image src="/logo-txt.svg" height="25px" width="260px" />
+                  <Image
+                    src="/logo-txt.svg"
+                    className="typography"
+                    height="25px"
+                    width="260px"
+                  />
                 ) : (
-                  <Image src="/logo-dark.png" height="25px" width="260px" />
+                  <Image
+                    src="/logo-dark.png"
+                    className="typography"
+                    height="25px"
+                    width="260px"
+                  />
                 )}
               </a>
             </Link>
           </Logo>
-          <Navigation>
+          <Navigation active={active}>
             <ul>
               <li>
                 <Link href="/">
@@ -78,6 +102,9 @@ export default function Header() {
               </li>
             </ul>
           </Navigation>
+          <a className="hambMenu" onClick={() => setActive(!active)}>
+            {active ? <HiOutlineX /> : <HiOutlineMenu />}
+          </a>
         </div>
       </div>
     </StyledHeader>

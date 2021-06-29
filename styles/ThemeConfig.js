@@ -78,7 +78,7 @@ const GlobalStyles = createGlobalStyle`
   p {
     color: ${({ theme }) => theme.text};
     font-size: 18px;
-    -webkit-font-smoothing: antialiased;
+    webkit-font-smoothing: antialiased;
   }
   a {
   color: inherit;

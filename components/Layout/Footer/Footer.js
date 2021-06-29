@@ -57,10 +57,14 @@ export default function Footer() {
             <h6>Kontakt</h6>
             <ul>
               <li>
-                <p>+381 61 6598696</p>
+                <Link href="tel:+381616598696">
+                  <a>+381 61 6598696</a>
+                </Link>
               </li>
               <li>
-                <p>safetytexbg@gmail.com</p>
+                <Link href="mailto:office@safetytex.rs">
+                  <a>office@safetytex.rs</a>
+                </Link>
               </li>
               <li>
                 <p>Naša radnja na mapi</p>
@@ -71,13 +75,19 @@ export default function Footer() {
             <h6>Usluga klijenata</h6>
             <ul>
               <li>
-                <p>Proizvodi</p>
+                <Link href="/proizvodi">
+                  <a>Proizvodi</a>
+                </Link>
               </li>
               <li>
-                <p>Radna odeca</p>
+                <Link href="/proizvodi/radna-odjeca">
+                  <a>Radna odjeća</a>
+                </Link>
               </li>
               <li>
-                <p>Radna obuca</p>
+                <Link href="/proizvodi/radna-obuca">
+                  <a>Radna obuća</a>
+                </Link>
               </li>
               <li>
                 <p>Tekstil</p>
@@ -88,10 +98,14 @@ export default function Footer() {
             <h6>Informacije</h6>
             <ul>
               <li>
-                <p>O Nama</p>
+                <Link href="/o-nama">
+                  <a>O Nama</a>
+                </Link>
               </li>
               <li>
-                <p>Kontakt</p>
+                <Link href="//kontakt">
+                  <a>Kontakt</a>
+                </Link>
               </li>
             </ul>
           </InfoCard>
@@ -99,16 +113,24 @@ export default function Footer() {
             <h6>Brzi linkovi</h6>
             <ul>
               <li>
-                <p>Pocetna</p>
+                <Link href="/">
+                  <a>Početna</a>
+                </Link>
               </li>
               <li>
-                <p>Proizvodi</p>
+                <Link href="/proizvodi/">
+                  <a>Proizvodi</a>
+                </Link>
               </li>
               <li>
-                <p>O Nama</p>
+                <Link href="/o-nama">
+                  <a>O Nama</a>
+                </Link>
               </li>
               <li>
-                <p>Kontakt</p>
+                <Link href="/kontakt">
+                  <a>Kontakt</a>
+                </Link>
               </li>
             </ul>
           </InfoCard>
@@ -155,7 +177,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#">
+                <Link href="https://www.facebook.com/SafetyTex-100467918184328/?ref=py_c">
                   <a target="blank">
                     <FaFacebookF />
                   </a>

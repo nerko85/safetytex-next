@@ -24,7 +24,6 @@ export default function ContactForm() {
   };
 
   const onSubmit = (values) => {
-    console.log(values);
     fetch("/api/mail", {
       method: "POST",
       body: JSON.stringify(values),
