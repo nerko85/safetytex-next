@@ -18,7 +18,7 @@ const Button = styled.button`
   text-transform: uppercase;
 
   &:hover {
-    box-shadow: 0 12px 16px 0 rgb(0 0 0 / 24%), 0 17px 50px 0 rgb(0 0 0 / 19%);
+    box-shadow: 0 12px 16px 0 rgb(0 0 0 / 24%), 0 5px 5px 0 rgb(0 0 0 / 19%);
     transform: scale(1.025);
   }
 `;

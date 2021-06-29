@@ -68,6 +68,7 @@ const Navigation = styled.nav`
 
     .contact-btn {
       margin-left:1rem;
+      padding-right:1rem;
     }
 
     li > a {
