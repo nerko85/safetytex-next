@@ -4,36 +4,34 @@ import ProductCard from "../ProductCard";
 import Select from "../../containers/Select";
 
 export default function ProductsGrid({ columns, rows, products, take }) {
-  const [sorted, setSorted] = useState([...products]);
+  // const [sorted, setSorted] = useState([...products]);
 
-  useEffect(() => {
-    console.log("test");
-  }, [sorted]);
+  // useEffect(() => {
+  //   setSorted();
+  // }, [sorted]);
 
-  const handleChange = (e) => {
-    const value = e.target.value;
-    setSorted(sortProducts(value));
-  };
+  // const handleChange = (e) => {
+  //   const value = e.target.value;
+  //   setSorted(sortProducts(value));
+  // };
 
-  const sortProducts = (value) => {
-    return products.sort((a, b) => {
-      if (value === "asc") {
-        if (a.name > b.name) {
-          return -1;
-        } else {
-          return 1;
-        }
-      } else {
-        if (a.name > b.name) {
-          return 1;
-        } else {
-          return -1;
-        }
-      }
-    });
-  };
-
-  console.log(sorted);
+  // const sortProducts = (value) => {
+  //   return products.sort((a, b) => {
+  //     if (value === "asc") {
+  //       if (a.name > b.name) {
+  //         return -1;
+  //       } else {
+  //         return 1;
+  //       }
+  //     } else {
+  //       if (a.name > b.name) {
+  //         return 1;
+  //       } else {
+  //         return -1;
+  //       }
+  //     }
+  //   });
+  // };
 
   return (
     <div className="content">
@@ -60,7 +58,7 @@ export default function ProductsGrid({ columns, rows, products, take }) {
         {!products ? (
           <div>Loading</div>
         ) : (
-          sorted.map((product) => {
+          products.map((product) => {
             const { id, images, name, status, price } = product;
             return (
               <ProductCard
