@@ -46,7 +46,7 @@ const GlobalStyles = createGlobalStyle`
     background:${({ theme }) => theme.background}
   } */}
   .container {
-    max-width:1150px;
+    max-width:1200px;
     margin: 0 auto;
     padding: 0 2rem;
   }
@@ -78,7 +78,8 @@ const GlobalStyles = createGlobalStyle`
   p {
     color: ${({ theme }) => theme.text};
     font-size: 18px;
-    webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing:.49px;
   }
   a {
   color: inherit;

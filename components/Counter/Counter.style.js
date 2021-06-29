@@ -16,7 +16,7 @@ const Stat = styled.div`
   }
 
   span {
-    font-size: 3.5rem;
+    font-size: 5rem;
     font-weight: bold;
   }
   p {

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Brands = styled.div`
   margin-top: 5rem;
-  padding: 3rem;
+  padding: 3.25rem 2rem;
   background: ${({ theme }) => theme.primary};
 
   .swiper-wrapper {

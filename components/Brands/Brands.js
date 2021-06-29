@@ -25,7 +25,7 @@ export default function Brands({ brands }) {
           disableOnInteraction: false,
         }}
         breakpoints={{
-          400: {
+          200: {
             slidesPerView: 1,
           },
           640: {

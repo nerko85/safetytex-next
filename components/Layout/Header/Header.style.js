@@ -63,8 +63,12 @@ const Navigation = styled.nav`
   ul {
     list-style: none;
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     align-items: center;
+
+    .contact-btn {
+      margin-left:1rem;
+    }
 
     li > a {
       color: ${({ theme }) => theme.navLinks};

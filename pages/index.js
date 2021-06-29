@@ -1,12 +1,12 @@
-import Head from "next/head";
 import Button from "../containers/Button";
+import Tag from "../containers/Tag";
 import Hero from "../components/Hero";
 import Facts from "../components/Facts";
 import Counter from "../components/Counter";
 import About from "../components/About";
 import Services from "../components/Services";
 import Brands from "../components/Brands";
-import Image from "next/image";
+import WeOffer from "../components/WeOffer";
 
 import { brands, company, categories } from "../data";
 import Map from "../components/Map";
@@ -27,35 +27,34 @@ export default function Home() {
       >
         <Counter />
       </Facts>
-      <About
-        title="Let's growth your business with us"
-        about="The four major types of construction include residential building, institutional and commercial building, specialized industrial construction."
-      >
-        <Image
-          src="/images/busines_meeting.png"
-          alt="Let's growth your business with us"
-          height="562px"
-          width="375px"
-          layout="intrinsic"
-        />
+      <About>
+          <Tag>O nama</Tag>
+          <h1>Let's growth your business with us</h1>
+          <p>
+            The four major types of construction include residential 
+            building, institutional and commercial building, specialized 
+            industrial construction.
+          </p>
+          <Button url="/o-nama">Learn More</Button>
       </About>
       <Services title="Preduzmi mere" services={categories} />
-      <About
-        type="partners"
-        title="Let's growth your business with us"
-        about="The four major types of construction include residential building, institutional and commercial building, specialized industrial construction.
-
-The four major types of construction include residential building, institutional and commercial building, specialized industrial construction."
-      >
-        <Image
-          src="/images/busines_meeting.png"
-          alt="Let's growth your business with us"
-          height="562px"
-          width="375px"
-          layout="intrinsic"
-        />
+      <About type="partners">
+        <Tag>Partneri</Tag>
+          <h1>Let's growth your business with us</h1>
+          <p>
+            The four major types of construction include residential 
+            building, institutional and commercial building, specialized 
+            industrial construction.
+          </p>
+          <p>
+            The four major types of construction include residential 
+            building, institutional and commercial building, specialized 
+            industrial construction.
+          </p>
+          {/* <Button url="/o-nama">Learn More</Button> */}
       </About>
       <Brands brands={brands} />
+      <WeOffer image={"/images/storepic.png"} bg={"/images/we-offer-bg.svg"}></WeOffer>
       <Map />
       <ContactDetails company={company} />
     </>

@@ -1,19 +1,24 @@
 import React from "react";
 import { About as StyledAbout } from "./About.style";
-import Tag from "../../containers/Tag";
-import Button from "../../containers/Button";
+import Image from 'next/image'
 
-export default function About({ title, about, type, children }) {
+
+export default function About({ type, children }) {
   return (
     <StyledAbout type={type}>
       <div className="container">
         <div className="content">
-          <div className="media">{children}</div>
+          <div className="media">
+            <Image
+              src="/images/busines_meeting.png"
+              alt="Let's growth your business with us"
+              height="562px"
+              width="375px"
+              layout="intrinsic"
+            />
+          </div>
           <div className="text-content">
-            <Tag>{type === "partners" ? "Partneri" : "O nama"}</Tag>
-            <h1>{title}</h1>
-            <p>{about}</p>
-            {type == "about" ? <Button url="/o-nama">Learn More</Button> : ""}
+            {children}
           </div>
         </div>
       </div>

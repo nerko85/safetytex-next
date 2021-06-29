@@ -4,24 +4,21 @@ const About = styled.div`
   .content {
     display: grid;
     grid-gap: 3rem;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:${({type})=>type==="about"?"1fr 1.5fr":"1.5fr 1fr"};
 
     .media {
       ${({ type }) =>
         type == "about" ? "margin-bottom" : "margin-top"}:-10rem;
       order: ${({ type }) => (type == "about" ? "unset" : "2")};
-      justify-self: end;
+      // justify-self: end;
     }
 
-    & > * {
-      flex: 1;
-    }
     .text-content {
-      flex: 2;
       ${({ type }) =>
         type == "about" ? "padding-bottom" : "padding-top"}:4rem;
       ${"" /* padding-bottom:4rem; */}
-      align-self:${({ type }) => (type == "about" ? "flex-start" : "flex-end")};
+      max-width:530px;
+     
     }
 
     @media (max-width: ${({ theme }) => theme.tablet}) {
@@ -31,6 +28,10 @@ const About = styled.div`
       .media {
         margin-bottom: 1rem;
         justify-self: center;
+      }
+      
+      .text-content {
+        max-width:100%;
       }
     }
   }

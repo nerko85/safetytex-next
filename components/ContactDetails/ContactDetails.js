@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { Details } from "./ContactDetails.style";
 import { FaPhoneSquareAlt, FaCommentDots } from "react-icons/fa";
 
@@ -8,7 +7,7 @@ export default function ContactDetails({ company }) {
   return (
     <div className="container">
       <Details>
-        <div className="card">
+        <div className="card address">
           <div className="info">
             <h4>Address:</h4>
             <p>{address}</p>

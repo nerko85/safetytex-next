@@ -3,10 +3,15 @@ import styled from "styled-components";
 const Button = styled.button`
   background: ${({ type, theme }) =>
     type === "primary" ? theme.primary : "#fff"};
+  height:45px;
+  width:187px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
   color: #fff;
   border-radius: 4px;
   border: none;
-  padding: 10px 15px;
+  // padding: 10px 15px;
   cursor: pointer;
   font-size: 1rem;
   transition: all 0.4s ease;

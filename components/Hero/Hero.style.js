@@ -15,7 +15,7 @@ const Hero = styled.div`
     align-self: center;
 
     .text {
-      max-width: 40vw;
+      max-width: 600px;
 
       @media (max-width: ${({ theme }) => theme.tablet}) {
         max-width: 90%;

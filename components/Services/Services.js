@@ -20,6 +20,7 @@ export default function Services({ title, services }) {
                   description={description}
                   icon={icon[1].fields.file.url}
                   slug={slug}
+                  type="services"
                 />
               );
             })}

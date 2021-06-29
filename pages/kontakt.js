@@ -28,7 +28,9 @@ export default function Home() {
       ></Hero>
       <Spacer />
       <ContactDetails company={company} />
-      <Map></Map>
+      <div className="container">
+        <Map/>
+      </div>
       <Spacer />
     </>
   );

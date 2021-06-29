@@ -97,7 +97,7 @@ export default function Header() {
                   <a>O nama</a>
                 </Link>
               </li>
-              <li>
+              <li className="contact-btn">
                 <Button url="tel:+381616598696">+381 61 6598696</Button>
               </li>
             </ul>

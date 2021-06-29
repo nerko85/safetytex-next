@@ -6,20 +6,19 @@ export default function CounterItem({ from, to, aditional = "" }) {
   const nodeRef = useRef();
   const { ref, inView, entry } = useInView({
     /* Optional options */
-    threshold: 0,
+    threshold: 1,
   });
+
   useEffect(() => {
     const node = nodeRef.current;
-    const controls =
-      inView &&
-      animate(from, to, {
+    const controls = animate(from, to, {
         duration: 1,
         onUpdate(value) {
           node.textContent = value.toFixed() + aditional;
         },
       });
     return () => controls.stop();
-  }, [from, to]);
+  }, [from, to, inView]);
 
   return (
     <div ref={ref}>
@@ -27,11 +26,3 @@ export default function CounterItem({ from, to, aditional = "" }) {
     </div>
   );
 }
-
-// const Component = () => {
-//   return (
-//     <div ref={ref}>
-//       <h2>{`Header inside viewport ${inView}.`}</h2>
-//     </div>
-//   );
-// };

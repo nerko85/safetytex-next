@@ -20,14 +20,25 @@ const Details = styled.div`
 
       h4 {
         margin: 0;
+        font-weight:400;
+      }
+
+      p{
+        font-weight:600;
       }
     }
 
-    &:first-child {
+    &.address {
+      padding:2rem;
       border-left: 5px solid ${({ theme }) => theme.primary};
+      box-shadow: 0 6px 8px rgb(0 0 0 / 19%);
 
       .info {
         margin-left: 0;
+
+        p {
+          font-weight:bold;
+        }
       }
     }
 
