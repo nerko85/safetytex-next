@@ -37,9 +37,12 @@ class ProductsProvider extends Component {
       return;
     }
 
+
     const target = e.target;
     const value = target.value;
     const name = target.name;
+
+
 
     if (target.type === "radio") {
       let tempValue = value.split(",");
@@ -123,7 +126,6 @@ class ProductsProvider extends Component {
     }
 
     if (minPrice && minPrice.length) {
-      console.log(minPrice);
       tempProducts = tempProducts.filter(
         (product) => product.price > minPrice && product.price < maxPrice
       );

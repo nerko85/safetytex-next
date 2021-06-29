@@ -19,15 +19,18 @@ import Button from "../../../containers/Button/Button";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-// const handleClick = () => {
-//   console.log("clicked");
-// };
-
 export default function Header() {
   const [active, setActive] = useState(false);
   const router = useRouter();
   const { pathname } = router;
   // router.events.on("routeChangeComplete", setActive(false));
+  
+const handleClick = () => {
+  setTimeout(()=>{
+    setActive(false)
+  }, 1000)
+};
+
   return (
     <StyledHeader active={active}>
       <HeaderTop>
@@ -76,7 +79,7 @@ export default function Header() {
             </Link>
           </Logo>
           <Navigation active={active}>
-            <ul>
+            <ul onClick={handleClick}>
               <li>
                 <Link href="/">
                   <a>Početna</a>

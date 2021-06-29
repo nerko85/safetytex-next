@@ -83,6 +83,7 @@ const Navigation = styled.nav`
 
   @media (max-width: ${({ theme }) => theme.tablet}) {
     display: ${({ active }) => (active ? "flex" : "none")};
+    z-index: 99;
     position: absolute;
     width: 100%;
     height: 100vh;
