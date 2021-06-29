@@ -10,10 +10,11 @@ export default function ProductsGrid({ columns, rows, products, take }) {
   //   setSorted();
   // }, [sorted]);
 
-  // const handleChange = (e) => {
-  //   const value = e.target.value;
-  //   setSorted(sortProducts(value));
-  // };
+  const handleChange = (e) => {
+    const value = e.target.value;
+    // setSorted(sortProducts(value));
+    console.log(value);
+  };
 
   // const sortProducts = (value) => {
   //   return products.sort((a, b) => {
