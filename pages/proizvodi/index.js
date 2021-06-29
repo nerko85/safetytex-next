@@ -28,6 +28,12 @@ export default function Proizvodi() {
   return (
     <>
       <NextSeo {...SEO} />
+      <Hero
+        title="Proizvodi"
+        subtitle="Home/Proizvodi"
+        hero="/images/blackstore1.png"
+        small
+      ></Hero>
       <StyledProducts>
         <div className="content">
           <CategoryGrid categories={categories}>

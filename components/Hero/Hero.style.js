@@ -29,6 +29,7 @@ const Hero = styled.div`
       p {
         color: ${({ small, theme }) => (small ? theme.text : "#fff")};
         margin-bottom: 3rem;
+        font-weight:600;
       }
     }
   }

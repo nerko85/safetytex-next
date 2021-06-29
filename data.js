@@ -289,7 +289,7 @@ const categories = [
         {
           fields: {
             file: {
-              url: "/images/group424.png",
+              url: "/images/Group424.png",
             },
           },
         },
