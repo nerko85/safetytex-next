@@ -1,16 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import { Filters as StyledFilters, FilterGroup } from "./Filters.style";
 import Input from "../../containers/Input";
 import Search from "../../containers/Search";
 
 import { useProducts } from "../../context/ProductsContext";
 
-export default function Filters({ type }) {
-  const { handleChange, handleSearch } = useProducts();
+export default function Filters({ tp }) {
+  const { handleChange, handleSearch, type, style, minPrice } = useProducts();
+
+  useEffect(() => {
+    handleChange()
+  }, [])
 
   function renderSwitch(param) {
     switch (param) {
-      case "type":
+      case "tp":
         return (
           <FilterGroup>
             <h3>Tip Proizvoda</h3>
@@ -226,5 +230,5 @@ export default function Filters({ type }) {
 }
 
 Filters.defaultProps = {
-  type: "",
+  tp: "",
 };

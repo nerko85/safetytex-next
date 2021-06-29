@@ -9,8 +9,8 @@ class ProductsProvider extends Component {
     featuredProducts: [],
     sortedProducts: [],
     isNew: "",
-    type: "",
-    style: "",
+    type: [],
+    style: [],
     minPrice: 0,
     maxPrice: 0,
     loading: true,
@@ -29,8 +29,14 @@ class ProductsProvider extends Component {
       this.setState({ loading: false });
     }, 2000);
   }
+  
 
   handleChange = (e) => {
+    if(!e) {
+      this.setState({sortedProducts:this.formatData(products)});
+      return;
+    }
+
     const target = e.target;
     const value = target.value;
     const name = target.name;
@@ -44,7 +50,7 @@ class ProductsProvider extends Component {
         },
         this.filterProducts
       );
-      console.log(this.state.minPrice, this.state.maxPrice);
+   
     } else {
       if (target.checked) {
         this.setState(
