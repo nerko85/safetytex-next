@@ -18,7 +18,7 @@ const Header = styled.header`
       border: none;
       font-size: 2rem;
       position: absolute;
-      top: 80px;
+      top: 74px;
       right: 40px;
       color: ${({ theme, active }) =>
         active ? theme.darkGray : theme.navLinks};
