@@ -2,5 +2,9 @@ import React from "react";
 import { Grid } from "./ProductsLayout.style";
 
 export default function ProductLayout({ children }) {
-  return <Grid>{children}</Grid>;
+  return (
+    <Grid>
+      <div className="grid-inner">{children}</div>
+    </Grid>
+  );
 }

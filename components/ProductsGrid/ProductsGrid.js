@@ -2,8 +2,11 @@ import React, { useEffect, useState } from "react";
 import { ProductsGrid as Grid, FilterTop } from "./ProductsGrid.style";
 import ProductCard from "../ProductCard";
 import Select from "../../containers/Select";
+import Pagination from "../../containers/Pagination";
 
 export default function ProductsGrid({ columns, rows, products, take }) {
+  const [page, setPage] = useState(1);
+
   // const [sorted, setSorted] = useState([...products]);
 
   // useEffect(() => {
@@ -13,9 +16,18 @@ export default function ProductsGrid({ columns, rows, products, take }) {
   const handleChange = (e) => {
     const value = e.target.value;
     // setSorted(sortProducts(value));
-    console.log(value);
   };
 
+  const DEFAULT_PAGE_LIMIT = 12;
+
+  console.log(products)
+  
+  const indexOfLastPost = page * DEFAULT_PAGE_LIMIT;
+  const indexOfFirstPost = indexOfLastPost - DEFAULT_PAGE_LIMIT;
+
+  const data = products?.slice(indexOfFirstPost, indexOfLastPost);
+
+  
   // const sortProducts = (value) => {
   //   return products.sort((a, b) => {
   //     if (value === "asc") {
@@ -56,10 +68,10 @@ export default function ProductsGrid({ columns, rows, products, take }) {
         </div>
       </FilterTop>
       <Grid columns={columns} rows={rows}>
-        {!products ? (
+        {!data ? (
           <div>Loading</div>
         ) : (
-          products.map((product) => {
+          data.map((product) => {
             const { id, images, name, status, price } = product;
             return (
               <ProductCard
@@ -72,6 +84,7 @@ export default function ProductsGrid({ columns, rows, products, take }) {
             );
           })
         )}
+        <Pagination page={page} setPage={setPage} DEFAULT_PAGE_LIMIT={DEFAULT_PAGE_LIMIT} data={data}/>
       </Grid>
     </div>
   );

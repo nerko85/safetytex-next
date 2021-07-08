@@ -246,6 +246,266 @@ const products = [
       ],
     },
   },
+  {
+    sys: {
+      id: "4",
+    },
+    fields: {
+      name: "Urban Plus bluza",
+      slug: "urban-plus-bluza",
+      price: 6500,
+      status: "available (Na stanju)",
+      topSelling: false,
+      featured: true,
+      type: "bluze",
+      style: "urban",
+      description:
+        "The four major types of construction include residential building, specialized industrial construction",
+      images: [
+        {
+          fields: {
+            file: {
+              url: "/images/jakna1.png",
+            },
+          },
+        },
+      ],
+    },
+  },
+  {
+    sys: {
+      id: "5",
+    },
+    fields: {
+      name: "Urban Plus bluza",
+      slug: "urban-plus-bluza",
+      price: 6500,
+      status: "available (Na stanju)",
+      topSelling: false,
+      featured: true,
+      type: "bluze",
+      style: "urban",
+      description:
+        "The four major types of construction include residential building, specialized industrial construction",
+      images: [
+        {
+          fields: {
+            file: {
+              url: "/images/jakna1.png",
+            },
+          },
+        },
+      ],
+    },
+  },
+  {
+    sys: {
+      id: "6",
+    },
+    fields: {
+      name: "Urban Plus bluza",
+      slug: "urban-plus-bluza",
+      price: 6500,
+      status: "available (Na stanju)",
+      topSelling: false,
+      featured: true,
+      type: "bluze",
+      style: "urban",
+      description:
+        "The four major types of construction include residential building, specialized industrial construction",
+      images: [
+        {
+          fields: {
+            file: {
+              url: "/images/jakna1.png",
+            },
+          },
+        },
+      ],
+    },
+  },
+  {
+    sys: {
+      id: "7",
+    },
+    fields: {
+      name: "Urban Plus bluza",
+      slug: "urban-plus-bluza",
+      price: 6500,
+      status: "available (Na stanju)",
+      topSelling: false,
+      featured: true,
+      type: "bluze",
+      style: "urban",
+      description:
+        "The four major types of construction include residential building, specialized industrial construction",
+      images: [
+        {
+          fields: {
+            file: {
+              url: "/images/jakna1.png",
+            },
+          },
+        },
+      ],
+    },
+  },
+  {
+    sys: {
+      id: "8",
+    },
+    fields: {
+      name: "Urban Plus bluza",
+      slug: "urban-plus-bluza",
+      price: 6500,
+      status: "available (Na stanju)",
+      topSelling: false,
+      featured: true,
+      type: "bluze",
+      style: "urban",
+      description:
+        "The four major types of construction include residential building, specialized industrial construction",
+      images: [
+        {
+          fields: {
+            file: {
+              url: "/images/jakna1.png",
+            },
+          },
+        },
+      ],
+    },
+  },
+  {
+    sys: {
+      id: "9",
+    },
+    fields: {
+      name: "Urban Plus bluza",
+      slug: "urban-plus-bluza",
+      price: 6500,
+      status: "available (Na stanju)",
+      topSelling: false,
+      featured: true,
+      type: "bluze",
+      style: "urban",
+      description:
+        "The four major types of construction include residential building, specialized industrial construction",
+      images: [
+        {
+          fields: {
+            file: {
+              url: "/images/jakna1.png",
+            },
+          },
+        },
+      ],
+    },
+  },
+  {
+    sys: {
+      id: "10",
+    },
+    fields: {
+      name: "Urban Plus bluza",
+      slug: "urban-plus-bluza",
+      price: 6500,
+      status: "available (Na stanju)",
+      topSelling: false,
+      featured: true,
+      type: "bluze",
+      style: "urban",
+      description:
+        "The four major types of construction include residential building, specialized industrial construction",
+      images: [
+        {
+          fields: {
+            file: {
+              url: "/images/jakna1.png",
+            },
+          },
+        },
+      ],
+    },
+  },
+  {
+    sys: {
+      id: "11",
+    },
+    fields: {
+      name: "Urban Plus bluza",
+      slug: "urban-plus-bluza",
+      price: 6500,
+      status: "available (Na stanju)",
+      topSelling: false,
+      featured: true,
+      type: "bluze",
+      style: "urban",
+      description:
+        "The four major types of construction include residential building, specialized industrial construction",
+      images: [
+        {
+          fields: {
+            file: {
+              url: "/images/jakna1.png",
+            },
+          },
+        },
+      ],
+    },
+  },
+  {
+    sys: {
+      id: "12",
+    },
+    fields: {
+      name: "Urban Plus bluza",
+      slug: "urban-plus-bluza",
+      price: 6500,
+      status: "available (Na stanju)",
+      topSelling: false,
+      featured: true,
+      type: "bluze",
+      style: "urban",
+      description:
+        "The four major types of construction include residential building, specialized industrial construction",
+      images: [
+        {
+          fields: {
+            file: {
+              url: "/images/jakna1.png",
+            },
+          },
+        },
+      ],
+    },
+  },
+  {
+    sys: {
+      id: "13",
+    },
+    fields: {
+      name: "Urban Plus bluza",
+      slug: "urban-plus-bluza",
+      price: 6500,
+      status: "available (Na stanju)",
+      topSelling: false,
+      featured: true,
+      type: "bluze",
+      style: "urban",
+      description:
+        "The four major types of construction include residential building, specialized industrial construction",
+      images: [
+        {
+          fields: {
+            file: {
+              url: "/images/jakna1.png",
+            },
+          },
+        },
+      ],
+    },
+  },
 ];
 
 const categories = [

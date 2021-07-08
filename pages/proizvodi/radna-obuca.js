@@ -37,7 +37,7 @@ export default function Proizvodi() {
         {loading ? (
           <div>Loading...</div>
         ) : (
-          <ProductsGrid columns={3} rows={4} products={sortedProducts} />
+          <ProductsGrid columns={3} rows={4} products={sortedProducts}/>
         )}
       </ProductLayout>
     </>
