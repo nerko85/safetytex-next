@@ -1,6 +1,9 @@
 import React, { Component, createContext, useContext } from "react";
 import { products } from "../data";
 
+import { createClient } from "contentful";
+import styled from "styled-components";
+
 const ProductsContext = createContext();
 
 class ProductsProvider extends Component {
@@ -17,7 +20,30 @@ class ProductsProvider extends Component {
   };
 
   componentDidMount() {
-    let items = this.formatData(products);
+    this.getData();
+    // let items = this.formatData(products);
+    // let featuredProducts = items.filter((item) => item.featured);
+    // this.setState({
+    //   products: items,
+    //   sortedProducts: items,
+    //   featuredProducts,
+    // });
+
+    // setTimeout(() => {
+    //   this.setState({ loading: false });
+    // }, 2000);
+  }
+
+  getData = async () => {
+    const client = createClient({
+      space: "skj2fdqwkajt",
+      accessToken: "4kuw0ZflkfieuKqVpE-D8wRW_Am2S6lxpJNRRrTW5yY",
+    });
+    const res = await client.getEntries({
+      content_type: "products",
+    });
+    let items = this.formatData(res.items);
+    console.log(items);
     let featuredProducts = items.filter((item) => item.featured);
     this.setState({
       products: items,
@@ -28,12 +54,12 @@ class ProductsProvider extends Component {
     setTimeout(() => {
       this.setState({ loading: false });
     }, 2000);
-  }
+  };
 
   handleChange = (e) => {
     if (!e) {
       this.setState({
-        sortedProducts: this.formatData(products),
+        sortedProducts: this.state.products,
         type: [],
         style: [],
         minPrice: 0,
@@ -93,9 +119,14 @@ class ProductsProvider extends Component {
   // formats the data from contentfull
   formatData(items) {
     let tempItems = items.map((item) => {
+      let { status, type, style } = item.fields;
+      status = status?.fields.name.toLowerCase();
+      type = type?.fields.name.toLowerCase();
+      style = style?.fields.name.toLowerCase();
+      console.log(status, type, style);
       let id = item.sys.id;
       let images = item.fields.images.map((image) => image.fields.file.url);
-      let details = { ...item.fields, id, images };
+      let details = { ...item.fields, id, images, status, type, style };
       return details;
     });
     return tempItems;

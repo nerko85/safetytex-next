@@ -11,6 +11,7 @@ import { NextSeo } from "next-seo";
 
 export default function Proizvodi() {
   const { products, sortedProducts, loading } = useProducts();
+  console.log(sortedProducts);
   const SEO = {
     title: "Safetytex - Radna obuća",
     description: "Ponuda radne obuće kompanije Safetytex",
@@ -37,7 +38,7 @@ export default function Proizvodi() {
         {loading ? (
           <div>Loading...</div>
         ) : (
-          <ProductsGrid columns={3} rows={4} products={sortedProducts}/>
+          <ProductsGrid columns={3} rows={4} products={sortedProducts} />
         )}
       </ProductLayout>
     </>
