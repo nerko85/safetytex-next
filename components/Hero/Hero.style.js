@@ -3,7 +3,8 @@ import styled from "styled-components";
 const Hero = styled.div`
   min-height: ${({ small }) => (small ? "400px" : "100vh")};
   display: flex;
-  background: url(${({ hero }) => hero}) no-repeat center;
+  background: url(${({ hero }) => hero}) no-repeat;
+  background-position: center;
   background-size: cover;
 
   @media (max-width: ${({ theme }) => theme.tablet}) {
@@ -29,7 +30,7 @@ const Hero = styled.div`
       p {
         color: ${({ small, theme }) => (small ? theme.text : "#fff")};
         margin-bottom: 3rem;
-        font-weight:600;
+        font-weight: 600;
       }
     }
   }

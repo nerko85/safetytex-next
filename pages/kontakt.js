@@ -29,7 +29,7 @@ export default function Home() {
       <Spacer />
       <ContactDetails company={company} />
       <div className="container">
-        <Map/>
+        <Map />
       </div>
       <Spacer />
     </>
