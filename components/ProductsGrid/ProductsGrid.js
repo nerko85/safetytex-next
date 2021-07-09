@@ -20,14 +20,11 @@ export default function ProductsGrid({ columns, rows, products, take }) {
 
   const DEFAULT_PAGE_LIMIT = 12;
 
-  console.log(products)
-  
   const indexOfLastPost = page * DEFAULT_PAGE_LIMIT;
   const indexOfFirstPost = indexOfLastPost - DEFAULT_PAGE_LIMIT;
 
   const data = products?.slice(indexOfFirstPost, indexOfLastPost);
 
-  
   // const sortProducts = (value) => {
   //   return products.sort((a, b) => {
   //     if (value === "asc") {
@@ -84,7 +81,13 @@ export default function ProductsGrid({ columns, rows, products, take }) {
             );
           })
         )}
-        <Pagination page={page} setPage={setPage} DEFAULT_PAGE_LIMIT={DEFAULT_PAGE_LIMIT} data={data}/>
+        <Pagination
+          page={page}
+          setPage={setPage}
+          DEFAULT_PAGE_LIMIT={DEFAULT_PAGE_LIMIT}
+          data={data}
+          products={products}
+        />
       </Grid>
     </div>
   );

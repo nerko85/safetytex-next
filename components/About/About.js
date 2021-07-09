@@ -1,7 +1,6 @@
 import React from "react";
 import { About as StyledAbout } from "./About.style";
-import Image from 'next/image'
-
+import Image from "next/image";
 
 export default function About({ type, children }) {
   return (
@@ -17,9 +16,7 @@ export default function About({ type, children }) {
               layout="intrinsic"
             />
           </div>
-          <div className="text-content">
-            {children}
-          </div>
+          <div className="text-content">{children}</div>
         </div>
       </div>
     </StyledAbout>
