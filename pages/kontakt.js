@@ -5,6 +5,8 @@ import Spacer from "../containers/Spacer";
 import ContactDetails from "../components/ContactDetails/ContactDetails";
 import { NextSeo } from "next-seo";
 
+import { createClient } from "contentful";
+
 export default function Kontakt({ company }) {
   const SEO = {
     title: "Safetytex - Kontakt",
