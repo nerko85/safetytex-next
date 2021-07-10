@@ -3,7 +3,7 @@ import { Details } from "./ContactDetails.style";
 import { FaPhoneSquareAlt, FaCommentDots } from "react-icons/fa";
 
 export default function ContactDetails({ company }) {
-  const { address, phone, email } = company.fields;
+  const { address, phone, email } = company[0].fields;
   return (
     <div className="container">
       <Details>

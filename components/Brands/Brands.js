@@ -42,13 +42,17 @@ export default function Brands({ brands }) {
         }}
       >
         {brands &&
-          brands.map((brand, index) => (
-            <SwiperSlide key={index}>
-              <div>
-                <img src={brand.image} alt={brand.name} />
-              </div>
-            </SwiperSlide>
-          ))}
+          brands.map((brand) => {
+            const { name, image } = brand.fields;
+
+            return (
+              <SwiperSlide key={name}>
+                <div>
+                  <img src={image.fields.file.url} alt={name} />
+                </div>
+              </SwiperSlide>
+            );
+          })}
         <div className="navigation next-button">
           <FaAngleRight />
         </div>

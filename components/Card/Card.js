@@ -9,27 +9,26 @@ export default function Card({ name, description, icon, slug, type }) {
     <StyledCard>
       <Link href={`/proizvodi/${slug}`}>
         <a>
-          <Image src={icon} height="118px" width="118px" />
+          <Image src={`https:${icon}`} height="118px" width="118px" />
         </a>
       </Link>
       <h3>{name}</h3>
       <p>{description}</p>
-      {
-        type ? 
+      {type ? (
         <Link href={`/proizvodi/${slug}`}>
           <a>
-          <img src="/images/Group371.png" alt={name} />
+            <img src="/images/Group371.png" alt={name} />
           </a>
         </Link>
-        : <Button url={`/proizvodi/${slug}`}>
+      ) : (
+        <Button url={`/proizvodi/${slug}`}>
           <img src="/images/Group371.png" alt={name} />
-      </Button>
-      }
-      
+        </Button>
+      )}
     </StyledCard>
   );
 }
 
-Card.defaultProps={
-  type:""
-}
+Card.defaultProps = {
+  type: "",
+};

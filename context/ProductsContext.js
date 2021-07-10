@@ -43,7 +43,6 @@ class ProductsProvider extends Component {
       content_type: "products",
     });
     let items = this.formatData(res.items);
-    console.log(items);
     let featuredProducts = items.filter((item) => item.featured);
     this.setState({
       products: items,
@@ -123,7 +122,7 @@ class ProductsProvider extends Component {
       status = status?.fields.name.toLowerCase();
       type = type?.fields.name.toLowerCase();
       style = style?.fields.name.toLowerCase();
-      console.log(status, type, style);
+
       let id = item.sys.id;
       let images = item.fields.images.map((image) => image.fields.file.url);
       let details = { ...item.fields, id, images, status, type, style };

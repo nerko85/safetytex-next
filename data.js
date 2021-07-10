@@ -27,23 +27,23 @@ const services = [
 
 const brands = [
   {
-    name: "",
+    name: "B&C Collection",
     image: "/images/slide1.svg",
   },
   {
-    name: "",
+    name: "Ardon",
     image: "/images/slide2.svg",
   },
   {
-    name: "",
+    name: "Gildan",
     image: "/images/slide3.svg",
   },
   {
-    name: "",
+    name: "Tee Jays",
     image: "/images/slide4.svg",
   },
   {
-    name: "",
+    name: "Result",
     image: "/images/slide5.svg",
   },
 ];
