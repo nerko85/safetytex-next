@@ -12,7 +12,7 @@ export default (req, res) => {
   `;
 
   const data = {
-    to: "office@safetytex.rs",
+    to: "newsletter@safetytex.rs",
     from: "contact@safetytex.rs",
     subject: "Newsletter sa Safetytex.rs",
     text: message,
