@@ -6,7 +6,7 @@ import ClientsSlider from "../components/ClientsSlider/ClientsSlider";
 import ContactUs from "../components/ContactUs";
 import { NextSeo } from "next-seo";
 
-export default function Home() {
+export default function About() {
   const SEO = {
     title: "Safetytex - O nama",
     description: "Ovdje mozete pronaci sve detalje o kompaniji Safetytex",

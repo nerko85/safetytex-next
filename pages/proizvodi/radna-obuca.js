@@ -9,7 +9,7 @@ import { categories } from "../../data";
 import { useProducts } from "../../context/ProductsContext";
 import { NextSeo } from "next-seo";
 
-export default function Proizvodi() {
+export default function WorkClothes() {
   const { products, sortedProducts, loading } = useProducts();
   console.log(sortedProducts);
   const SEO = {
