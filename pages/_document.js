@@ -9,6 +9,10 @@ export default class CustomDocument extends Document {
     return (
       <Html className="scroll-smooth antialiased">
         <Head>
+          <meta
+            name="google-site-verification"
+            content="PTdUajuX9ViNWmdqLTIaVfAmLWNu4Y1HkSKNjarEdPQ"
+          />
           <Script
             src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GTM_ID}`}
             strategy="afterInteractive"
